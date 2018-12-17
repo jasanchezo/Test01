@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Test01" x:Class="Test01.MainPage">
+    
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <!-- Place new controls here -->
+        
+        
+        
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style x:Key="S" TargetType="{x:Type Button}">
+                    <Setter Property="TextColor" Value="Red">
+                        
+                    </Setter>
+                </Style>
+                
+                <x:Array x:Key="ArregloStrings" Type="{x:Type x:String}" >
+                    <x:String>A</x:String>
+                    <x:String>B</x:String>
+                    <x:String>C</x:String>
+                </x:Array>
+                
+                
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        
+        <ListView ItemsSource="{StaticResource ArregloStrings}" />
+       
+        
+        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        
+        <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
+            Welcome to Xamarin.Forms 2!
+        </Label>
+        
+        <Image x:Name="RuntimeImage" Source="{x:Null}" />
+        
+        <Button Text="Mostrar imagen" Clicked="Handle_Clicked" />
+        
+        <Entry Text="Binding ID" />
+        
+
+    </StackLayout>
+</ContentPage>
